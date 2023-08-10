@@ -1,0 +1,43 @@
+{
+  "name": "runtil",
+  "version": "1.0.0",
+  "description": "Run a command until the target string has been printed",
+  "scripts": {
+    "build": "rimraf dist & tsc && chmod +x dist/bin/runtil.js",
+    "prepublish": "npm run build",
+    "cli": "npm run build && node dist/bin/runtil.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentender/runtil.git"
+  },
+  "keywords": [
+    "run",
+    "until",
+    "wait",
+    "kill"
+  ],
+  "author": "Craigory Coppola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agentender/runtil/issues"
+  },
+  "homepage": "https://github.com/agentender/runtil#readme",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "bin": {
+    "runtil": "./dist/bin/runtil.js"
+  },
+  "dependencies": {
+    "@types/node": "^20.4.9",
+    "@types/yargs": "^17.0.24",
+    "express": "^4.18.2",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6",
+    "yargs": "^17.7.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
